@@ -7,16 +7,19 @@
   <meta name="description" content="Explore luxury fashion collections for women, men, and kids." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="site-shell light-page">
-    <header class="topbar">Discover the latest seasonal selection</header>
+    <header class="topbar">
+      <span><i class="fa-regular fa-star"></i> Discover the latest seasonal selection</span>
+    </header>
 
     <nav class="navbar navbar-light">
       <div class="container nav-inner">
-        <button class="nav-toggle" aria-label="Open menu">
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span>
           <span></span>
         </button>
@@ -32,17 +35,19 @@
         </div>
 
         <div class="nav-actions">
-          <a href="index.html" class="icon-btn">Home</a>
-          <a href="product.html" class="icon-btn">Bag(2)</a>
+          <button class="icon-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+          <a href="#" class="icon-btn" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+          <a href="#" class="icon-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></a>
+          <a href="product.html" class="icon-btn" aria-label="Bag"><i class="fa-solid fa-bag-shopping"></i><span class="icon-badge">2</span></a>
         </div>
       </div>
 
-      <div class="mobile-menu">
-        <a href="products.html?category=women">Women</a>
-        <a href="products.html?category=men">Men</a>
-        <a href="products.html?category=kids">Kids</a>
-        <a href="products.html?category=new">New Arrivals</a>
-        <a href="products.html?category=sale">Sale</a>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="products.html?category=women"><i class="fa-solid fa-person-dress"></i><span>Women</span></a>
+        <a href="products.html?category=men"><i class="fa-solid fa-person"></i><span>Men</span></a>
+        <a href="products.html?category=kids"><i class="fa-solid fa-child-reaching"></i><span>Kids</span></a>
+        <a href="products.html?category=new"><i class="fa-regular fa-star"></i><span>New Arrivals</span></a>
+        <a href="products.html?category=sale"><i class="fa-solid fa-tag"></i><span>Sale</span></a>
       </div>
     </nav>
 
@@ -109,10 +114,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="Tailored blazer" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
+                      <span>New</span>
+                    </div>
                     <h3>Tailored Wool Blazer</h3>
-                    <p>Women</p>
                     <strong>$420</strong>
                   </div>
                 </a>
@@ -122,10 +131,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80" alt="Silk dress" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
+                      <span>Limited</span>
+                    </div>
                     <h3>Silk Evening Dress</h3>
-                    <p>Women</p>
                     <strong>$560</strong>
                   </div>
                 </a>
@@ -135,10 +148,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" alt="Structured jacket" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-person"></i> Men</p>
+                      <span>Classic</span>
+                    </div>
                     <h3>Structured Jacket</h3>
-                    <p>Men</p>
                     <strong>$390</strong>
                   </div>
                 </a>
@@ -148,10 +165,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80" alt="Luxury tee" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-person"></i> Men</p>
+                      <span>Essential</span>
+                    </div>
                     <h3>Signature Heavy Tee</h3>
-                    <p>Men</p>
                     <strong>$145</strong>
                   </div>
                 </a>
@@ -161,10 +182,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=1200&q=80" alt="Kids set" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-child-reaching"></i> Kids</p>
+                      <span>Soft edit</span>
+                    </div>
                     <h3>Premium Knit Set</h3>
-                    <p>Kids</p>
                     <strong>$140</strong>
                   </div>
                 </a>
@@ -174,10 +199,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80" alt="Cream coat" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
+                      <span>Tailored</span>
+                    </div>
                     <h3>Soft Tailored Coat</h3>
-                    <p>Women</p>
                     <strong>$610</strong>
                   </div>
                 </a>
@@ -187,10 +216,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=1200&q=80" alt="Black shirt" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-person"></i> Men</p>
+                      <span>Minimal</span>
+                    </div>
                     <h3>Minimal Black Shirt</h3>
-                    <p>Men</p>
                     <strong>$185</strong>
                   </div>
                 </a>
@@ -200,10 +233,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1200&q=80" alt="White outfit" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
+                      <span>Icon</span>
+                    </div>
                     <h3>Essential Layered Set</h3>
-                    <p>Women</p>
                     <strong>$280</strong>
                   </div>
                 </a>
@@ -213,10 +250,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80" alt="Dress" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
+                      <span>Evening</span>
+                    </div>
                     <h3>Pleated Night Dress</h3>
-                    <p>Women</p>
                     <strong>$530</strong>
                   </div>
                 </a>
@@ -226,10 +267,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=1200&q=80" alt="Kids outerwear" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-child-reaching"></i> Kids</p>
+                      <span>Outerwear</span>
+                    </div>
                     <h3>Kids Wool Outerwear</h3>
-                    <p>Kids</p>
                     <strong>$165</strong>
                   </div>
                 </a>
@@ -239,10 +284,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80" alt="Luxury dress" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
+                      <span>Fluid</span>
+                    </div>
                     <h3>Fluid Satin Dress</h3>
-                    <p>Women</p>
                     <strong>$495</strong>
                   </div>
                 </a>
@@ -252,10 +301,14 @@
                 <a href="product.html">
                   <div class="product-media">
                     <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=1200&q=80" alt="Mens knitwear" />
+                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
                   </div>
                   <div class="product-info">
+                    <div class="product-meta">
+                      <p><i class="fa-solid fa-person"></i> Men</p>
+                      <span>Knitwear</span>
+                    </div>
                     <h3>Fine Gauge Knit Polo</h3>
-                    <p>Men</p>
                     <strong>$225</strong>
                   </div>
                 </a>
@@ -277,23 +330,23 @@
 
         <div>
           <h4>Collections</h4>
-          <a href="products.html?category=women">Women</a>
-          <a href="products.html?category=men">Men</a>
-          <a href="products.html?category=kids">Kids</a>
+          <a href="products.html?category=women"><i class="fa-solid fa-person-dress"></i><span>Women</span></a>
+          <a href="products.html?category=men"><i class="fa-solid fa-person"></i><span>Men</span></a>
+          <a href="products.html?category=kids"><i class="fa-solid fa-child-reaching"></i><span>Kids</span></a>
         </div>
 
         <div>
           <h4>Customer Care</h4>
-          <a href="#">Contact</a>
-          <a href="#">Delivery</a>
-          <a href="#">Returns</a>
+          <a href="#"><i class="fa-regular fa-message"></i><span>Contact</span></a>
+          <a href="#"><i class="fa-solid fa-truck"></i><span>Delivery</span></a>
+          <a href="#"><i class="fa-solid fa-arrow-rotate-left"></i><span>Returns</span></a>
         </div>
 
         <div>
           <h4>Journal</h4>
-          <a href="#">Campaigns</a>
-          <a href="#">Lookbook</a>
-          <a href="#">Editorial</a>
+          <a href="#"><i class="fa-regular fa-image"></i><span>Campaigns</span></a>
+          <a href="#"><i class="fa-regular fa-bookmark"></i><span>Lookbook</span></a>
+          <a href="#"><i class="fa-regular fa-newspaper"></i><span>Editorial</span></a>
         </div>
       </div>
     </footer>
