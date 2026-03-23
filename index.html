@@ -7,16 +7,19 @@
   <meta name="description" content="Maison Élitaire luxury fashion for men, women, and kids." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="site-shell">
-    <header class="topbar">Complimentary shipping on all orders above $300</header>
+    <header class="topbar">
+      <span><i class="fa-solid fa-truck-fast"></i> Complimentary shipping on all orders above $300</span>
+    </header>
 
     <nav class="navbar">
       <div class="container nav-inner">
-        <button class="nav-toggle" aria-label="Open menu">
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
           <span></span>
           <span></span>
         </button>
@@ -33,20 +36,28 @@
 
         <div class="nav-actions">
           <button class="icon-btn search-btn" aria-label="Search">
-            <span>Search</span>
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
-          <a href="products.html" class="icon-btn">Shop</a>
-          <a href="product.html" class="icon-btn">Bag(2)</a>
+          <a href="#" class="icon-btn" aria-label="Account">
+            <i class="fa-regular fa-user"></i>
+          </a>
+          <a href="#" class="icon-btn" aria-label="Wishlist">
+            <i class="fa-regular fa-heart"></i>
+          </a>
+          <a href="product.html" class="icon-btn" aria-label="Bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="icon-badge">2</span>
+          </a>
         </div>
       </div>
 
-      <div class="mobile-menu">
-        <a href="products.html?category=women">Women</a>
-        <a href="products.html?category=men">Men</a>
-        <a href="products.html?category=kids">Kids</a>
-        <a href="products.html?category=new">New Arrivals</a>
-        <a href="products.html?category=sale">Sale</a>
-        <a href="products.html">All Products</a>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="products.html?category=women"><i class="fa-solid fa-person-dress"></i><span>Women</span></a>
+        <a href="products.html?category=men"><i class="fa-solid fa-person"></i><span>Men</span></a>
+        <a href="products.html?category=kids"><i class="fa-solid fa-child-reaching"></i><span>Kids</span></a>
+        <a href="products.html?category=new"><i class="fa-regular fa-star"></i><span>New Arrivals</span></a>
+        <a href="products.html?category=sale"><i class="fa-solid fa-tag"></i><span>Sale</span></a>
+        <a href="products.html"><i class="fa-solid fa-grid-2"></i><span>All Products</span></a>
       </div>
     </nav>
 
@@ -63,8 +74,14 @@
             A modern luxury wardrobe for men, women, and children, defined by clean form, rich textures, and timeless confidence.
           </p>
           <div class="hero-actions">
-            <a href="products.html?category=women" class="btn btn-light">Shop Women</a>
-            <a href="products.html?category=men" class="btn btn-outline-light">Explore Men</a>
+            <a href="products.html?category=women" class="btn btn-light">
+              <i class="fa-solid fa-arrow-right"></i>
+              <span>Shop Women</span>
+            </a>
+            <a href="products.html?category=men" class="btn btn-outline-light">
+              <i class="fa-solid fa-arrow-right"></i>
+              <span>Explore Men</span>
+            </a>
           </div>
         </div>
       </section>
@@ -86,29 +103,35 @@
       <section class="section categories">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">Collections</p>
-            <h2>Shop by world</h2>
+            <div>
+              <p class="eyebrow">Collections</p>
+              <h2>Shop by world</h2>
+            </div>
+            <a href="products.html" class="section-link">
+              <span>View all</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
 
           <div class="category-grid">
             <a class="category-card tall reveal" href="products.html?category=women">
               <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80" alt="Women collection" />
               <div class="category-overlay">
-                <span>Women</span>
+                <span><i class="fa-solid fa-person-dress"></i> Women</span>
               </div>
             </a>
 
             <a class="category-card reveal" href="products.html?category=men">
               <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" alt="Men collection" />
               <div class="category-overlay">
-                <span>Men</span>
+                <span><i class="fa-solid fa-person"></i> Men</span>
               </div>
             </a>
 
             <a class="category-card reveal" href="products.html?category=kids">
               <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=1200&q=80" alt="Kids collection" />
               <div class="category-overlay">
-                <span>Kids</span>
+                <span><i class="fa-solid fa-child-reaching"></i> Kids</span>
               </div>
             </a>
           </div>
@@ -127,7 +150,56 @@
             <p>
               Discover structured blazers, soft knitwear, fluid dresses, premium denim, elevated children’s essentials, and seasonal accessories created for confident daily dressing.
             </p>
+
+            <div class="feature-points">
+              <div class="feature-point">
+                <i class="fa-solid fa-scissors"></i>
+                <span>Precision tailoring</span>
+              </div>
+              <div class="feature-point">
+                <i class="fa-solid fa-shirt"></i>
+                <span>Premium essentials</span>
+              </div>
+              <div class="feature-point">
+                <i class="fa-solid fa-gem"></i>
+                <span>Editorial styling</span>
+              </div>
+            </div>
+
             <a href="products.html" class="text-link">View all products</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section editorial-mosaic">
+        <div class="container">
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">Editorial Gallery</p>
+              <h2>Visual rhythm in motion</h2>
+            </div>
+            <p class="section-note">An asymmetrical composition designed to feel curated, balanced, and distinctly high-end.</p>
+          </div>
+
+          <div class="mosaic-grid reveal">
+            <article class="mosaic-card mosaic-a">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80" alt="Luxury editorial portrait" />
+            </article>
+            <article class="mosaic-card mosaic-b">
+              <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80" alt="Street luxury fashion editorial" />
+            </article>
+            <article class="mosaic-card mosaic-c">
+              <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80" alt="Tailored coat editorial" />
+            </article>
+            <article class="mosaic-card mosaic-d">
+              <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1200&q=80" alt="Minimal white fashion styling" />
+            </article>
+            <article class="mosaic-card mosaic-e">
+              <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=1200&q=80" alt="Mens luxury knitwear" />
+            </article>
+            <article class="mosaic-card mosaic-f">
+              <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=1200&q=80" alt="Dark fashion editorial" />
+            </article>
           </div>
         </div>
       </section>
@@ -135,8 +207,14 @@
       <section class="section featured-products">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">Best Sellers</p>
-            <h2>Featured pieces</h2>
+            <div>
+              <p class="eyebrow">Best Sellers</p>
+              <h2>Featured pieces</h2>
+            </div>
+            <a href="products.html" class="section-link">
+              <span>Shop all</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
 
           <div class="product-grid">
@@ -144,10 +222,16 @@
               <a href="product.html">
                 <div class="product-media">
                   <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="Tailored wool blazer" />
+                  <button class="card-action" aria-label="Add to wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
                 </div>
                 <div class="product-info">
+                  <div class="product-meta">
+                    <p><i class="fa-solid fa-person-dress"></i> Women</p>
+                    <span>New</span>
+                  </div>
                   <h3>Tailored Wool Blazer</h3>
-                  <p>Women</p>
                   <strong>$420</strong>
                 </div>
               </a>
@@ -157,10 +241,16 @@
               <a href="product.html">
                 <div class="product-media">
                   <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80" alt="Silk evening dress" />
+                  <button class="card-action" aria-label="Add to wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
                 </div>
                 <div class="product-info">
+                  <div class="product-meta">
+                    <p><i class="fa-solid fa-person-dress"></i> Women</p>
+                    <span>Limited</span>
+                  </div>
                   <h3>Silk Evening Dress</h3>
-                  <p>Women</p>
                   <strong>$560</strong>
                 </div>
               </a>
@@ -170,10 +260,16 @@
               <a href="product.html">
                 <div class="product-media">
                   <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" alt="Structured mens jacket" />
+                  <button class="card-action" aria-label="Add to wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
                 </div>
                 <div class="product-info">
+                  <div class="product-meta">
+                    <p><i class="fa-solid fa-person"></i> Men</p>
+                    <span>Classic</span>
+                  </div>
                   <h3>Structured Jacket</h3>
-                  <p>Men</p>
                   <strong>$390</strong>
                 </div>
               </a>
@@ -183,10 +279,16 @@
               <a href="product.html">
                 <div class="product-media">
                   <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=1200&q=80" alt="Kids premium knit set" />
+                  <button class="card-action" aria-label="Add to wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                  </button>
                 </div>
                 <div class="product-info">
+                  <div class="product-meta">
+                    <p><i class="fa-solid fa-child-reaching"></i> Kids</p>
+                    <span>Soft edit</span>
+                  </div>
                   <h3>Premium Knit Set</h3>
-                  <p>Kids</p>
                   <strong>$140</strong>
                 </div>
               </a>
@@ -199,15 +301,24 @@
         <div class="container campaign-inner reveal">
           <p class="eyebrow">New Arrivals</p>
           <h2>Objects of style, shaped with precision</h2>
-          <a href="products.html?category=new" class="btn btn-dark">Discover the drop</a>
+          <a href="products.html?category=new" class="btn btn-dark">
+            <i class="fa-solid fa-arrow-right"></i>
+            <span>Discover the drop</span>
+          </a>
         </div>
       </section>
 
       <section class="section journal">
         <div class="container">
           <div class="section-head reveal">
-            <p class="eyebrow">From the House</p>
-            <h2>Latest stories</h2>
+            <div>
+              <p class="eyebrow">From the House</p>
+              <h2>Latest stories</h2>
+            </div>
+            <a href="#" class="section-link">
+              <span>Explore journal</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
 
           <div class="journal-grid">
@@ -246,7 +357,10 @@
           </div>
           <form class="newsletter-form">
             <input type="email" placeholder="Email address" />
-            <button type="submit" class="btn btn-dark">Subscribe</button>
+            <button type="submit" class="btn btn-dark">
+              <i class="fa-regular fa-envelope"></i>
+              <span>Subscribe</span>
+            </button>
           </form>
         </div>
       </section>
@@ -263,26 +377,26 @@
 
         <div>
           <h4>Shop</h4>
-          <a href="products.html?category=women">Women</a>
-          <a href="products.html?category=men">Men</a>
-          <a href="products.html?category=kids">Kids</a>
-          <a href="products.html?category=new">New Arrivals</a>
+          <a href="products.html?category=women"><i class="fa-solid fa-person-dress"></i><span>Women</span></a>
+          <a href="products.html?category=men"><i class="fa-solid fa-person"></i><span>Men</span></a>
+          <a href="products.html?category=kids"><i class="fa-solid fa-child-reaching"></i><span>Kids</span></a>
+          <a href="products.html?category=new"><i class="fa-regular fa-star"></i><span>New Arrivals</span></a>
         </div>
 
         <div>
           <h4>Support</h4>
-          <a href="#">Shipping</a>
-          <a href="#">Returns</a>
-          <a href="#">Client Services</a>
-          <a href="#">Size Guide</a>
+          <a href="#"><i class="fa-solid fa-truck"></i><span>Shipping</span></a>
+          <a href="#"><i class="fa-solid fa-arrow-rotate-left"></i><span>Returns</span></a>
+          <a href="#"><i class="fa-regular fa-message"></i><span>Client Services</span></a>
+          <a href="#"><i class="fa-solid fa-ruler-combined"></i><span>Size Guide</span></a>
         </div>
 
         <div>
           <h4>Follow</h4>
-          <a href="#">Instagram</a>
-          <a href="#">TikTok</a>
-          <a href="#">Pinterest</a>
-          <a href="#">YouTube</a>
+          <a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+          <a href="#"><i class="fab fa-tiktok"></i><span>TikTok</span></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i><span>Pinterest</span></a>
+          <a href="#"><i class="fab fa-youtube"></i><span>YouTube</span></a>
         </div>
       </div>
     </footer>
