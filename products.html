@@ -4,17 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Collections | Maison Élitaire</title>
-  <meta name="description" content="Explore luxury fashion collections for women, men, and kids." />
+  <meta name="description" content="Explore luxury fashion collections for women, men, and children." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body data-page="products">
   <div class="site-shell light-page">
     <header class="topbar">
-      <span><i class="fa-regular fa-star"></i> Discover the latest seasonal selection</span>
+      Discover the latest seasonal selection
     </header>
 
     <nav class="navbar navbar-light">
@@ -24,296 +25,137 @@
           <span></span>
         </button>
 
-        <a href="index.html" class="brand">MAISON ÉLITAIRE</a>
-
-        <div class="nav-links">
-          <a href="products.html?category=women">Women</a>
-          <a href="products.html?category=men">Men</a>
-          <a href="products.html?category=kids">Kids</a>
-          <a href="products.html?category=new">New</a>
-          <a href="products.html?category=sale">Sale</a>
+        <div class="nav-links nav-left">
+          <a href="products.html?category=Women">Women</a>
+          <a href="products.html?category=Men">Men</a>
+          <a href="products.html?category=Children">Children</a>
         </div>
 
-        <div class="nav-actions">
-          <button class="icon-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-          <a href="#" class="icon-btn" aria-label="Account"><i class="fa-regular fa-user"></i></a>
-          <a href="#" class="icon-btn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></a>
-          <a href="product.html" class="icon-btn" aria-label="Bag"><i class="fa-solid fa-bag-shopping"></i><span class="icon-badge">2</span></a>
+        <a href="index.html" class="brand">MAISON ÉLITAIRE</a>
+
+        <div class="nav-links nav-right">
+          <a href="products.html?edit=New Arrivals">New</a>
+          <a href="products.html">Collections</a>
+          <button class="nav-text-btn search-open-btn" aria-label="Open search">Search</button>
+          <button class="nav-icon-btn cart-open-btn" aria-label="Open bag">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-count" data-cart-count>0</span>
+          </button>
         </div>
       </div>
 
       <div class="mobile-menu" id="mobileMenu">
-        <a href="products.html?category=women"><i class="fa-solid fa-person-dress"></i><span>Women</span></a>
-        <a href="products.html?category=men"><i class="fa-solid fa-person"></i><span>Men</span></a>
-        <a href="products.html?category=kids"><i class="fa-solid fa-child-reaching"></i><span>Kids</span></a>
-        <a href="products.html?category=new"><i class="fa-regular fa-star"></i><span>New Arrivals</span></a>
-        <a href="products.html?category=sale"><i class="fa-solid fa-tag"></i><span>Sale</span></a>
+        <a href="products.html?category=Women">Women</a>
+        <a href="products.html?category=Men">Men</a>
+        <a href="products.html?category=Children">Children</a>
+        <a href="products.html?edit=New Arrivals">New Arrivals</a>
+        <a href="products.html">Collections</a>
+        <button class="mobile-search-btn search-open-btn">Search</button>
       </div>
     </nav>
 
     <main>
       <section class="listing-hero">
         <div class="container listing-hero-grid">
-          <div class="reveal">
-            <p class="eyebrow">Collections</p>
-            <h1>Curated modern fashion</h1>
-            <p class="listing-copy">
-              Explore timeless pieces, contemporary tailoring, premium essentials, and elevated seasonal dressing across women’s, men’s, and kids’ categories.
+          <div>
+            <p class="eyebrow" id="productsHeroEyebrow">Collections</p>
+            <h1 id="productsHeroTitle">Curated modern fashion.</h1>
+            <p class="listing-copy" id="productsHeroCopy">
+              A composed edit of tailoring, fluid dressing, premium essentials, and elevated children's wear.
             </p>
           </div>
-          <div class="listing-hero-image reveal">
-            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=80" alt="Collection campaign" />
+
+          <div class="listing-hero-image">
+            <img
+              id="productsHeroImage"
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1500&q=80"
+              alt="Collection campaign"
+            />
           </div>
         </div>
       </section>
 
       <section class="section product-listing-page">
         <div class="container product-page-grid">
-          <aside class="filters reveal">
+          <aside class="filters">
             <div class="filter-group">
-              <h3>Category</h3>
-              <label><input type="radio" name="category" checked> All</label>
-              <label><input type="radio" name="category"> Women</label>
-              <label><input type="radio" name="category"> Men</label>
-              <label><input type="radio" name="category"> Kids</label>
+              <h3>Women</h3>
+              <label><a href="products.html?category=Women&subcategory=Dresses">Dresses</a></label>
+              <label><a href="products.html?category=Women&subcategory=Tops">Tops</a></label>
+              <label><a href="products.html?category=Women&subcategory=Trousers">Trousers</a></label>
+              <label><a href="products.html?category=Women&subcategory=Skirts">Skirts</a></label>
+              <label><a href="products.html?category=Women&subcategory=Knitwear">Knitwear</a></label>
+              <label><a href="products.html?category=Women&subcategory=Outerwear">Outerwear</a></label>
+              <label><a href="products.html?category=Women&subcategory=Shoes">Shoes</a></label>
+              <label><a href="products.html?category=Women&subcategory=Bags">Bags</a></label>
+              <label><a href="products.html?category=Women&subcategory=Accessories">Accessories</a></label>
             </div>
 
             <div class="filter-group">
-              <h3>Type</h3>
-              <label><input type="checkbox"> Jackets</label>
-              <label><input type="checkbox"> Dresses</label>
-              <label><input type="checkbox"> Knitwear</label>
-              <label><input type="checkbox"> Essentials</label>
+              <h3>Men</h3>
+              <label><a href="products.html?category=Men&subcategory=Shirts">Shirts</a></label>
+              <label><a href="products.html?category=Men&subcategory=T-Shirts">T-Shirts</a></label>
+              <label><a href="products.html?category=Men&subcategory=Trousers">Trousers</a></label>
+              <label><a href="products.html?category=Men&subcategory=Denim">Denim</a></label>
+              <label><a href="products.html?category=Men&subcategory=Jackets">Jackets</a></label>
+              <label><a href="products.html?category=Men&subcategory=Knitwear">Knitwear</a></label>
+              <label><a href="products.html?category=Men&subcategory=Shoes">Shoes</a></label>
+              <label><a href="products.html?category=Men&subcategory=Accessories">Accessories</a></label>
             </div>
 
             <div class="filter-group">
-              <h3>Size</h3>
-              <div class="size-pills">
-                <button>XS</button>
-                <button>S</button>
-                <button>M</button>
-                <button>L</button>
-                <button>XL</button>
-              </div>
+              <h3>Children</h3>
+              <label><a href="products.html?category=Children&subcategory=Girls">Girls</a></label>
+              <label><a href="products.html?category=Children&subcategory=Boys">Boys</a></label>
+              <label><a href="products.html?category=Children&subcategory=Baby">Baby</a></label>
+              <label><a href="products.html?category=Children&subcategory=Sets">Sets</a></label>
+              <label><a href="products.html?category=Children&subcategory=Outerwear">Outerwear</a></label>
+              <label><a href="products.html?category=Children&subcategory=Shoes">Shoes</a></label>
+              <label><a href="products.html?category=Children&subcategory=Accessories">Accessories</a></label>
+            </div>
+
+            <div class="filter-group">
+              <h3>Edits</h3>
+              <label><a href="products.html?edit=New Arrivals">New Arrivals</a></label>
+              <label><a href="products.html?edit=Best Sellers">Best Sellers</a></label>
+              <label><a href="products.html?edit=Sale">Sale</a></label>
+              <label><a href="products.html?edit=Occasion Wear">Occasion Wear</a></label>
+              <label><a href="products.html?edit=Essentials">Essentials</a></label>
+              <label><a href="products.html?edit=Summer Edit">Summer Edit</a></label>
+              <label><a href="products.html?edit=Tailoring">Tailoring</a></label>
+              <label><a href="products.html?edit=Evening">Evening</a></label>
+              <label><a href="products.html?edit=Resort">Resort</a></label>
+              <label><a href="products.html?edit=Gift Edit">Gift Edit</a></label>
             </div>
           </aside>
 
           <div class="products-content">
-            <div class="products-toolbar reveal">
-              <p>Showing 12 refined essentials</p>
-              <select>
-                <option>Sort by newest</option>
-                <option>Price: Low to high</option>
-                <option>Price: High to low</option>
-                <option>Best selling</option>
-              </select>
+            <div class="products-toolbar">
+              <p id="productsToolbarLabel">Showing all refined pieces</p>
+
+              <div class="products-toolbar-actions">
+                <select id="productsSortSelect" aria-label="Sort products">
+                  <option value="default">Sort by</option>
+                  <option value="price-low">Price: Low to high</option>
+                  <option value="price-high">Price: High to low</option>
+                  <option value="name-asc">Name: A to Z</option>
+                  <option value="name-desc">Name: Z to A</option>
+                </select>
+              </div>
             </div>
 
-            <div class="product-grid listing-grid">
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80" alt="Tailored blazer" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
-                      <span>New</span>
-                    </div>
-                    <h3>Tailored Wool Blazer</h3>
-                    <strong>$420</strong>
-                  </div>
-                </a>
-              </article>
+            <div class="active-filters" id="activeFilters"></div>
 
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80" alt="Silk dress" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
-                      <span>Limited</span>
-                    </div>
-                    <h3>Silk Evening Dress</h3>
-                    <strong>$560</strong>
-                  </div>
-                </a>
-              </article>
+            <div class="product-grid listing-grid" id="productsGrid"></div>
 
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" alt="Structured jacket" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-person"></i> Men</p>
-                      <span>Classic</span>
-                    </div>
-                    <h3>Structured Jacket</h3>
-                    <strong>$390</strong>
-                  </div>
-                </a>
-              </article>
-
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80" alt="Luxury tee" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-person"></i> Men</p>
-                      <span>Essential</span>
-                    </div>
-                    <h3>Signature Heavy Tee</h3>
-                    <strong>$145</strong>
-                  </div>
-                </a>
-              </article>
-
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?auto=format&fit=crop&w=1200&q=80" alt="Kids set" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-child-reaching"></i> Kids</p>
-                      <span>Soft edit</span>
-                    </div>
-                    <h3>Premium Knit Set</h3>
-                    <strong>$140</strong>
-                  </div>
-                </a>
-              </article>
-
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80" alt="Cream coat" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
-                      <span>Tailored</span>
-                    </div>
-                    <h3>Soft Tailored Coat</h3>
-                    <strong>$610</strong>
-                  </div>
-                </a>
-              </article>
-
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1516257984-b1b4d707412e?auto=format&fit=crop&w=1200&q=80" alt="Black shirt" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-person"></i> Men</p>
-                      <span>Minimal</span>
-                    </div>
-                    <h3>Minimal Black Shirt</h3>
-                    <strong>$185</strong>
-                  </div>
-                </a>
-              </article>
-
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=1200&q=80" alt="White outfit" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
-                      <span>Icon</span>
-                    </div>
-                    <h3>Essential Layered Set</h3>
-                    <strong>$280</strong>
-                  </div>
-                </a>
-              </article>
-
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80" alt="Dress" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
-                      <span>Evening</span>
-                    </div>
-                    <h3>Pleated Night Dress</h3>
-                    <strong>$530</strong>
-                  </div>
-                </a>
-              </article>
-
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=1200&q=80" alt="Kids outerwear" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-child-reaching"></i> Kids</p>
-                      <span>Outerwear</span>
-                    </div>
-                    <h3>Kids Wool Outerwear</h3>
-                    <strong>$165</strong>
-                  </div>
-                </a>
-              </article>
-
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80" alt="Luxury dress" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-person-dress"></i> Women</p>
-                      <span>Fluid</span>
-                    </div>
-                    <h3>Fluid Satin Dress</h3>
-                    <strong>$495</strong>
-                  </div>
-                </a>
-              </article>
-
-              <article class="product-card reveal">
-                <a href="product.html">
-                  <div class="product-media">
-                    <img src="https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?auto=format&fit=crop&w=1200&q=80" alt="Mens knitwear" />
-                    <button class="card-action" aria-label="Add to wishlist"><i class="fa-regular fa-heart"></i></button>
-                  </div>
-                  <div class="product-info">
-                    <div class="product-meta">
-                      <p><i class="fa-solid fa-person"></i> Men</p>
-                      <span>Knitwear</span>
-                    </div>
-                    <h3>Fine Gauge Knit Polo</h3>
-                    <strong>$225</strong>
-                  </div>
-                </a>
-              </article>
+            <div class="empty-products-state" id="emptyProductsState" hidden>
+              <p class="eyebrow">No Results</p>
+              <h2>No products found for this selection.</h2>
+              <p>Try another category, subcategory, or edit.</p>
+              <a href="products.html" class="btn btn-dark">View all products</a>
             </div>
+
+            <div class="products-pagination" id="productsPagination"></div>
           </div>
         </div>
       </section>
@@ -324,34 +166,153 @@
         <div>
           <a href="index.html" class="brand footer-brand">MAISON ÉLITAIRE</a>
           <p class="footer-copy">
-            Precision crafted fashion with a modern house identity.
+            Precision crafted fashion with a composed house identity.
           </p>
         </div>
 
         <div>
-          <h4>Collections</h4>
-          <a href="products.html?category=women"><i class="fa-solid fa-person-dress"></i><span>Women</span></a>
-          <a href="products.html?category=men"><i class="fa-solid fa-person"></i><span>Men</span></a>
-          <a href="products.html?category=kids"><i class="fa-solid fa-child-reaching"></i><span>Kids</span></a>
+          <h4>Women</h4>
+          <a href="products.html?category=Women&subcategory=Dresses">Dresses</a>
+          <a href="products.html?category=Women&subcategory=Tops">Tops</a>
+          <a href="products.html?category=Women&subcategory=Outerwear">Outerwear</a>
+          <a href="products.html?category=Women&subcategory=Accessories">Accessories</a>
         </div>
 
         <div>
-          <h4>Customer Care</h4>
-          <a href="#"><i class="fa-regular fa-message"></i><span>Contact</span></a>
-          <a href="#"><i class="fa-solid fa-truck"></i><span>Delivery</span></a>
-          <a href="#"><i class="fa-solid fa-arrow-rotate-left"></i><span>Returns</span></a>
+          <h4>Men</h4>
+          <a href="products.html?category=Men&subcategory=Shirts">Shirts</a>
+          <a href="products.html?category=Men&subcategory=Jackets">Jackets</a>
+          <a href="products.html?category=Men&subcategory=Knitwear">Knitwear</a>
+          <a href="products.html?category=Men&subcategory=Accessories">Accessories</a>
         </div>
 
         <div>
-          <h4>Journal</h4>
-          <a href="#"><i class="fa-regular fa-image"></i><span>Campaigns</span></a>
-          <a href="#"><i class="fa-regular fa-bookmark"></i><span>Lookbook</span></a>
-          <a href="#"><i class="fa-regular fa-newspaper"></i><span>Editorial</span></a>
+          <h4>Children & Edits</h4>
+          <a href="products.html?category=Children&subcategory=Sets">Sets</a>
+          <a href="products.html?category=Children&subcategory=Outerwear">Outerwear</a>
+          <a href="products.html?edit=Best Sellers">Best Sellers</a>
+          <a href="products.html?edit=Gift Edit">Gift Edit</a>
         </div>
       </div>
     </footer>
   </div>
 
+  <div class="overlay search-overlay" data-search-overlay aria-hidden="true">
+    <div class="overlay-panel search-panel" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+      <button class="overlay-close search-close-btn" aria-label="Close search">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="search-header">
+        <p class="eyebrow">Search</p>
+        <h2 id="searchTitle">Find the piece</h2>
+      </div>
+
+      <form class="search-form">
+        <input type="search" placeholder="Search for tailoring, dresses, knitwear..." aria-label="Search products" id="searchInput" />
+      </form>
+
+      <div class="search-suggestions">
+        <button type="button">Tailoring</button>
+        <button type="button">Evening</button>
+        <button type="button">Knitwear</button>
+        <button type="button">Children</button>
+      </div>
+
+      <div class="search-results-grid" id="searchResultsGrid"></div>
+    </div>
+  </div>
+
+  <aside class="cart-drawer" data-cart-drawer aria-hidden="true">
+    <div class="cart-overlay" data-cart-close></div>
+
+    <div class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+      <div class="cart-header">
+        <div>
+          <p class="eyebrow">Bag</p>
+          <h2 id="cartTitle">Your selection</h2>
+        </div>
+        <button class="overlay-close cart-close-btn" aria-label="Close bag">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="cart-body">
+        <div class="cart-items" data-cart-items></div>
+
+        <div class="cart-benefits">
+          <div>
+            <strong>Complimentary delivery</strong>
+            <span>On selected orders and destinations</span>
+          </div>
+          <div>
+            <strong>Returns</strong>
+            <span>Accepted within 14 days in original condition</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <strong data-cart-subtotal>$0</strong>
+        </div>
+        <div class="cart-summary-row small">
+          <span>Estimated shipping</span>
+          <span>Calculated at checkout</span>
+        </div>
+        <button class="btn btn-dark full-width">Proceed to checkout</button>
+        <button class="btn btn-outline-dark full-width cart-clear-btn">Clear bag</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="overlay quick-view-overlay" data-quick-view-overlay aria-hidden="true">
+    <div class="overlay-panel quick-view-panel" role="dialog" aria-modal="true" aria-labelledby="quickViewTitle">
+      <button class="overlay-close quick-view-close-btn" aria-label="Close quick view">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="quick-view-grid">
+        <div class="quick-view-image-wrap">
+          <img src="" alt="" data-quick-view-image />
+        </div>
+
+        <div class="quick-view-copy">
+          <p class="eyebrow" data-quick-view-category></p>
+          <h2 id="quickViewTitle" data-quick-view-name></h2>
+          <strong class="quick-view-price" data-quick-view-price></strong>
+          <p class="quick-view-description" data-quick-view-description></p>
+
+          <div class="quick-view-options">
+            <div>
+              <p class="option-label">Size</p>
+              <div class="size-pills quick-size-pills" data-quick-view-sizes></div>
+            </div>
+
+            <div>
+              <p class="option-label">Quantity</p>
+              <div class="qty-control">
+                <button type="button" data-qty-minus>-</button>
+                <span data-quick-qty>1</span>
+                <button type="button" data-qty-plus>+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-view-actions">
+            <button class="btn btn-dark full-width" data-quick-add>Add to bag</button>
+            <a href="product.html" class="btn btn-outline-dark full-width" data-quick-view-link>View product</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="women.js"></script>
+  <script src="men.js"></script>
+  <script src="children.js"></script>
+  <script src="edits.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
