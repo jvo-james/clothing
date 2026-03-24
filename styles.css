@@ -605,7 +605,7 @@ button {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: 10px;
 }
 
 .product-card a {
@@ -643,7 +643,7 @@ button {
 }
 
 .product-info {
-  padding: 16px 2px 0;
+  padding: 10px 2px 0;
 }
 
 .product-category {
@@ -1998,7 +1998,7 @@ button {
 @media (min-width: 901px) {
   .listing-grid {
     grid-template-columns: repeat(12, 1fr);
-    gap: 24px;
+    gap: 10px;
   }
 
   .listing-grid .product-card:nth-child(12n + 1),
@@ -2500,4 +2500,21 @@ button {
     border-color: rgba(17,17,17,0.08);
     background: rgba(17,17,17,0.02);
   }
+}
+
+.product-card {
+  margin: 0;
+}
+
+.product-card a {
+  display: block;
+  height: 100%;
+}
+
+.product-media {
+  border-radius: 0;
+}
+
+.listing-grid .product-card .product-media {
+  border-radius: 0;
 }
