@@ -2678,3 +2678,107 @@ body[data-page="home"] .navbar .cart-count {
     font-size: 0.88rem;
   }
 }
+/* 1. Black cart + hamburger on products and product pages */
+body[data-page="products"] .navbar .nav-icon-btn,
+body[data-page="products"] .navbar .nav-toggle,
+body[data-page="product"] .navbar .nav-icon-btn,
+body[data-page="product"] .navbar .nav-toggle {
+  color: #111 !important;
+}
+
+body[data-page="products"] .navbar .nav-toggle span,
+body[data-page="product"] .navbar .nav-toggle span {
+  background: #111 !important;
+}
+
+body[data-page="products"] .navbar .nav-icon-btn i,
+body[data-page="product"] .navbar .nav-icon-btn i {
+  color: #111 !important;
+}
+
+body[data-page="products"] .navbar .cart-count,
+body[data-page="product"] .navbar .cart-count {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+/* 1b. Make all close buttons black */
+.overlay-close,
+.filters-drawer-close {
+  color: #111 !important;
+  background: rgba(17, 17, 17, 0.05) !important;
+  box-shadow: inset 0 0 0 1px rgba(17, 17, 17, 0.08) !important;
+}
+
+.overlay-close i,
+.filters-drawer-close i {
+  color: #111 !important;
+}
+
+/* 2. Search / quick view modal fixes */
+.search-panel,
+.quick-view-panel {
+  max-height: min(88vh, 920px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable;
+}
+
+/* visible sticky top area so header/close always show */
+.search-panel .search-header,
+.quick-view-panel .quick-view-copy .eyebrow,
+.quick-view-panel .quick-view-copy h2 {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 640px) {
+  .search-panel,
+  .quick-view-panel {
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    border-radius: 0;
+    padding-top: 76px !important;
+    padding-bottom: 28px !important;
+  }
+
+  .search-panel .search-header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    padding-top: 4px;
+    padding-bottom: 14px;
+    z-index: 3;
+  }
+
+  .quick-view-copy {
+    padding-bottom: 28px !important;
+  }
+
+  .quick-view-actions {
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+    padding-top: 14px;
+    z-index: 3;
+  }
+
+  .search-panel::after,
+  .quick-view-panel::after {
+    display: none !important;
+  }
+}
+
+/* desktop search panel also scrolls internally */
+.search-panel .search-results-grid,
+.quick-view-panel .quick-view-grid {
+  min-height: 0;
+}
+.search-result-card {
+  width: 100%;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+}
