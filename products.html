@@ -78,56 +78,80 @@
       <section class="section product-listing-page">
         <div class="container product-page-grid">
           <aside class="filters">
-            <div class="filter-group">
-              <h3>Women</h3>
-              <label><a href="products.html?category=Women&subcategory=Dresses">Dresses</a></label>
-              <label><a href="products.html?category=Women&subcategory=Tops">Tops</a></label>
-              <label><a href="products.html?category=Women&subcategory=Trousers">Trousers</a></label>
-              <label><a href="products.html?category=Women&subcategory=Skirts">Skirts</a></label>
-              <label><a href="products.html?category=Women&subcategory=Knitwear">Knitwear</a></label>
-              <label><a href="products.html?category=Women&subcategory=Outerwear">Outerwear</a></label>
-              <label><a href="products.html?category=Women&subcategory=Shoes">Shoes</a></label>
-              <label><a href="products.html?category=Women&subcategory=Bags">Bags</a></label>
-              <label><a href="products.html?category=Women&subcategory=Accessories">Accessories</a></label>
-            </div>
+  <div class="filters-mobile-bar">
+    <button class="filters-drawer-open" type="button" aria-expanded="false" aria-controls="filtersDrawer">
+      <i class="fa-solid fa-sliders"></i>
+      <span>Filter Collections</span>
+    </button>
+  </div>
 
-            <div class="filter-group">
-              <h3>Men</h3>
-              <label><a href="products.html?category=Men&subcategory=Shirts">Shirts</a></label>
-              <label><a href="products.html?category=Men&subcategory=T-Shirts">T-Shirts</a></label>
-              <label><a href="products.html?category=Men&subcategory=Trousers">Trousers</a></label>
-              <label><a href="products.html?category=Men&subcategory=Denim">Denim</a></label>
-              <label><a href="products.html?category=Men&subcategory=Jackets">Jackets</a></label>
-              <label><a href="products.html?category=Men&subcategory=Knitwear">Knitwear</a></label>
-              <label><a href="products.html?category=Men&subcategory=Shoes">Shoes</a></label>
-              <label><a href="products.html?category=Men&subcategory=Accessories">Accessories</a></label>
-            </div>
+  <div class="filters-drawer" id="filtersDrawer">
+    <div class="filters-drawer-head">
+      <span>Browse</span>
+      <button class="filters-drawer-close" type="button" aria-label="Close filters">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
 
-            <div class="filter-group">
-              <h3>Children</h3>
-              <label><a href="products.html?category=Children&subcategory=Girls">Girls</a></label>
-              <label><a href="products.html?category=Children&subcategory=Boys">Boys</a></label>
-              <label><a href="products.html?category=Children&subcategory=Baby">Baby</a></label>
-              <label><a href="products.html?category=Children&subcategory=Sets">Sets</a></label>
-              <label><a href="products.html?category=Children&subcategory=Outerwear">Outerwear</a></label>
-              <label><a href="products.html?category=Children&subcategory=Shoes">Shoes</a></label>
-              <label><a href="products.html?category=Children&subcategory=Accessories">Accessories</a></label>
-            </div>
+    <div class="filter-group filter-accordion active">
+      <button class="filter-accordion-btn" type="button">Women</button>
+      <div class="filter-accordion-panel filter-chip-grid">
+        <a href="products.html?category=Women&subcategory=Dresses">Dresses</a>
+        <a href="products.html?category=Women&subcategory=Tops">Tops</a>
+        <a href="products.html?category=Women&subcategory=Trousers">Trousers</a>
+        <a href="products.html?category=Women&subcategory=Skirts">Skirts</a>
+        <a href="products.html?category=Women&subcategory=Knitwear">Knitwear</a>
+        <a href="products.html?category=Women&subcategory=Outerwear">Outerwear</a>
+        <a href="products.html?category=Women&subcategory=Shoes">Shoes</a>
+        <a href="products.html?category=Women&subcategory=Bags">Bags</a>
+        <a href="products.html?category=Women&subcategory=Accessories">Accessories</a>
+      </div>
+    </div>
 
-            <div class="filter-group">
-              <h3>Edits</h3>
-              <label><a href="products.html?edit=New Arrivals">New Arrivals</a></label>
-              <label><a href="products.html?edit=Best Sellers">Best Sellers</a></label>
-              <label><a href="products.html?edit=Sale">Sale</a></label>
-              <label><a href="products.html?edit=Occasion Wear">Occasion Wear</a></label>
-              <label><a href="products.html?edit=Essentials">Essentials</a></label>
-              <label><a href="products.html?edit=Summer Edit">Summer Edit</a></label>
-              <label><a href="products.html?edit=Tailoring">Tailoring</a></label>
-              <label><a href="products.html?edit=Evening">Evening</a></label>
-              <label><a href="products.html?edit=Resort">Resort</a></label>
-              <label><a href="products.html?edit=Gift Edit">Gift Edit</a></label>
-            </div>
-          </aside>
+    <div class="filter-group filter-accordion">
+      <button class="filter-accordion-btn" type="button">Men</button>
+      <div class="filter-accordion-panel filter-chip-grid">
+        <a href="products.html?category=Men&subcategory=Shirts">Shirts</a>
+        <a href="products.html?category=Men&subcategory=T-Shirts">T-Shirts</a>
+        <a href="products.html?category=Men&subcategory=Trousers">Trousers</a>
+        <a href="products.html?category=Men&subcategory=Denim">Denim</a>
+        <a href="products.html?category=Men&subcategory=Jackets">Jackets</a>
+        <a href="products.html?category=Men&subcategory=Knitwear">Knitwear</a>
+        <a href="products.html?category=Men&subcategory=Shoes">Shoes</a>
+        <a href="products.html?category=Men&subcategory=Accessories">Accessories</a>
+      </div>
+    </div>
+
+    <div class="filter-group filter-accordion">
+      <button class="filter-accordion-btn" type="button">Children</button>
+      <div class="filter-accordion-panel filter-chip-grid">
+        <a href="products.html?category=Children&subcategory=Girls">Girls</a>
+        <a href="products.html?category=Children&subcategory=Boys">Boys</a>
+        <a href="products.html?category=Children&subcategory=Baby">Baby</a>
+        <a href="products.html?category=Children&subcategory=Sets">Sets</a>
+        <a href="products.html?category=Children&subcategory=Outerwear">Outerwear</a>
+        <a href="products.html?category=Children&subcategory=Shoes">Shoes</a>
+        <a href="products.html?category=Children&subcategory=Accessories">Accessories</a>
+      </div>
+    </div>
+
+    <div class="filter-group filter-accordion">
+      <button class="filter-accordion-btn" type="button">Edits</button>
+      <div class="filter-accordion-panel filter-chip-grid">
+        <a href="products.html?edit=New Arrivals">New Arrivals</a>
+        <a href="products.html?edit=Best Sellers">Best Sellers</a>
+        <a href="products.html?edit=Sale">Sale</a>
+        <a href="products.html?edit=Occasion Wear">Occasion Wear</a>
+        <a href="products.html?edit=Essentials">Essentials</a>
+        <a href="products.html?edit=Summer Edit">Summer Edit</a>
+        <a href="products.html?edit=Tailoring">Tailoring</a>
+        <a href="products.html?edit=Evening">Evening</a>
+        <a href="products.html?edit=Resort">Resort</a>
+        <a href="products.html?edit=Gift Edit">Gift Edit</a>
+      </div>
+    </div>
+  </div>
+</aside>
 
           <div class="products-content">
             <div class="products-toolbar">
