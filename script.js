@@ -786,14 +786,61 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProductsPage();
     renderProductPage();
 
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") {
-        closeSearch();
-        closeQuickView();
-        closeCart();
-      }
-    });
+   document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeSearch();
+    closeQuickView();
+    closeCart();
+
+    const drawer = document.getElementById("filtersDrawer");
+    const openBtn = document.querySelector(".filters-drawer-open");
+    if (drawer && drawer.classList.contains("active")) {
+      drawer.classList.remove("active");
+      body.classList.remove("no-scroll");
+      if (openBtn) openBtn.setAttribute("aria-expanded", "false");
+    }
+  }
+});
+
+  function bindFiltersDrawer() {
+  const openBtn = document.querySelector(".filters-drawer-open");
+  const closeBtn = document.querySelector(".filters-drawer-close");
+  const drawer = document.getElementById("filtersDrawer");
+
+  if (!openBtn || !drawer) return;
+
+  const openDrawer = () => {
+    drawer.classList.add("active");
+    body.classList.add("no-scroll");
+    openBtn.setAttribute("aria-expanded", "true");
+  };
+
+  const closeDrawer = () => {
+    drawer.classList.remove("active");
+    body.classList.remove("no-scroll");
+    openBtn.setAttribute("aria-expanded", "false");
+  };
+
+  openBtn.addEventListener("click", openDrawer);
+
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeDrawer);
   }
 
+  drawer.addEventListener("click", (e) => {
+    if (e.target === drawer) {
+      closeDrawer();
+    }
+  });
+
+  document.querySelectorAll(".filter-accordion-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const group = btn.closest(".filter-accordion");
+      if (!group) return;
+      group.classList.toggle("active");
+    });
+  });
+}
+  bindFiltersDrawer();
   initialize();
 });
